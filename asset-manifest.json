@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/inverrawebsite/static/css/main.5a77c64e.css",
-    "main.js": "/inverrawebsite/static/js/main.1a234ea4.js",
+    "main.js": "/inverrawebsite/static/js/main.7433b5e9.js",
     "index.html": "/inverrawebsite/index.html",
     "main.5a77c64e.css.map": "/inverrawebsite/static/css/main.5a77c64e.css.map",
-    "main.1a234ea4.js.map": "/inverrawebsite/static/js/main.1a234ea4.js.map"
+    "main.7433b5e9.js.map": "/inverrawebsite/static/js/main.7433b5e9.js.map"
   },
   "entrypoints": [
     "static/css/main.5a77c64e.css",
-    "static/js/main.1a234ea4.js"
+    "static/js/main.7433b5e9.js"
   ]
 }
