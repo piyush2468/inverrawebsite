@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverraholding - Data Engineering, Science & Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Inverraholding</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="typing-animation">
+                    <h1>Transform Your <span class="highlight" id="typing-text">Data</span> Into <span class="highlight">Business Intelligence</span></h1>
+                </div>
+                <p class="fade-in-up">We provide comprehensive data engineering, data science, analytics, and web development solutions to help your business make data-driven decisions and achieve measurable growth.</p>
+                <div class="hero-buttons fade-in-up">
+                    <a href="#services" class="btn btn-primary">
+                        <span>Explore Services</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get Started</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="data-visualization">
+                    <div class="floating-elements">
+                        <div class="floating-item" style="--delay: 0s">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="floating-item" style="--delay: 0.5s">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="floating-item" style="--delay: 1s">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="floating-item" style="--delay: 1.5s">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar animated-bar" style="height: 60%; --delay: 0.2s"></div>
+                            <div class="bar animated-bar" style="height: 80%; --delay: 0.4s"></div>
+                            <div class="bar animated-bar" style="height: 45%; --delay: 0.6s"></div>
+                            <div class="bar animated-bar" style="height: 90%; --delay: 0.8s"></div>
+                            <div class="bar animated-bar" style="height: 70%; --delay: 1s"></div>
+                        </div>
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Innovative digital solutions that transform your business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Data Engineering</h3>
+                    <p>Build robust data pipelines, ETL processes, and scalable data architectures that ensure reliable data flow and accessibility.</p>
+                    <ul class="service-features">
+                        <li>Data Pipeline Development</li>
+                        <li>ETL/ELT Processes</li>
+                        <li>Data Warehousing</li>
+                        <li>Real-time Data Processing</li>
+                        <li>Cloud Data Solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Leverage advanced machine learning and AI to extract valuable insights and build predictive models for your business.</p>
+                    <ul class="service-features">
+                        <li>Machine Learning Models</li>
+                        <li>Predictive Analytics</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform raw data into actionable insights through comprehensive analysis, visualization, and business intelligence solutions.</p>
+                    <ul class="service-features">
+                        <li>Business Intelligence</li>
+                        <li>Interactive Dashboards</li>
+                        <li>Data Visualization</li>
+                        <li>Performance Metrics</li>
+                        <li>Custom Reports</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Create stunning, responsive websites and web applications that engage users and drive business growth.</p>
+                    <ul class="service-features">
+                        <li>Custom Website Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Progressive Web Apps</li>
+                        <li>API Development</li>
+                        <li>Mobile-First Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2>About Inverraholding</h2>
+                        <p>Your trusted partner in data transformation</p>
+                    </div>
+                    <p>We are a team of experienced data professionals dedicated to helping businesses unlock the full potential of their data. With expertise spanning data engineering, data science, and analytics, we provide end-to-end solutions that drive real business value.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>150+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="tech-stack">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">SQL</div>
+                        <div class="tech-item">Apache Spark</div>
+                        <div class="tech-item">AWS</div>
+                        <div class="tech-item">Azure</div>
+                        <div class="tech-item">Snowflake</div>
+                        <div class="tech-item">Tableau</div>
+                        <div class="tech-item">Power BI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <p>Successful data solutions we've delivered</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="analytics">
+                    <div class="portfolio-image">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Analytics Platform</h3>
+                        <p>Built a comprehensive analytics platform that increased sales conversion by 35% through customer behavior analysis and predictive modeling.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Tableau</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="engineering">
+                    <div class="portfolio-image">
+                        <i class="fas fa-heart"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Healthcare Data Pipeline</h3>
+                        <p>Designed and implemented a real-time data pipeline processing millions of patient records while ensuring HIPAA compliance.</p>
+                        <div class="portfolio-tags">
+                            <span>Apache Kafka</span>
+                            <span>AWS</span>
+                            <span>ETL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="science">
+                    <div class="portfolio-image">
+                        <i class="fas fa-coins"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Financial Risk Assessment</h3>
+                        <p>Developed machine learning models to assess credit risk, reducing default rates by 25% and improving loan approval efficiency.</p>
+                        <div class="portfolio-tags">
+                            <span>Risk Modeling</span>
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <i class="fas fa-globe"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Corporate Website Redesign</h3>
+                        <p>Complete website overhaul with modern design, improved UX, and 40% faster loading times. Integrated with CMS and analytics.</p>
+                        <div class="portfolio-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Progressive Web App</h3>
+                        <p>Built a PWA for inventory management with offline capabilities, real-time sync, and native app-like experience.</p>
+                        <div class="portfolio-tags">
+                            <span>PWA</span>
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="analytics">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-pie"></i>
+                        <div class="portfolio-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Real-time Dashboard</h3>
+                        <p>Interactive web dashboard for monitoring KPIs with real-time data updates and predictive insights for business intelligence.</p>
+                        <div class="portfolio-tags">
+                            <span>D3.js</span>
+                            <span>WebSocket</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your data? Let's discuss your project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@inverraholding.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xpzvgero" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="data-engineering">Data Engineering</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    </div>
+                    <!-- Google reCAPTCHA -->
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                    </div>
+                    <!-- Hidden field to specify recipient email -->
+                    <input type="hidden" name="_replyto" value="info@inverraholding.com">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Inverraholding">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Inverraholding</span>
+                    </div>
+                    <p>Transforming businesses through data-driven insights and intelligent solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Data Engineering</a></li>
+                        <li><a href="#services">Data Science</a></li>
+                        <li><a href="#services">Data Analytics</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Inverraholding. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
