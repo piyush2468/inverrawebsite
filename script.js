@@ -183,7 +183,15 @@ contactForm.addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
-            showNotification('Thank you for your message! We will get back to you soon.', 'success');
+            // Hide the form
+            contactForm.style.display = 'none';
+            // Show a form submitted message
+            const formContainer = contactForm.parentElement;
+            const submittedMsg = document.createElement('div');
+            submittedMsg.className = 'form-submitted-message';
+            submittedMsg.style.cssText = 'padding:2rem;text-align:center;font-size:1.3rem;color:#27ae60;background:#f6fff7;border-radius:10px;margin-top:1rem;';
+            submittedMsg.innerHTML = '<i class="fas fa-check-circle" style="font-size:2rem;color:#27ae60;"></i><br>Thank you for your message! We will get back to you soon.';
+            formContainer.appendChild(submittedMsg);
             contactForm.reset();
             grecaptcha.reset(); // Reset reCAPTCHA
         } else {
