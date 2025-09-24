@@ -8,6 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+            function onSubmit(token) {
+                document.getElementById("contact-form").submit();
+            }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -364,14 +369,11 @@
                         <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
                     </div>
                     <!-- Google reCAPTCHA -->
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6Le8PdQrAAAAAODO3EEjZ9JU2nMOAg0iW4OEUidU"></div>
-                    </div>
                     <!-- Hidden field to specify recipient email -->
                     <input type="hidden" name="_replyto" value="piyushraj246800@gmail.com">
                     <input type="hidden" name="access_key" value="11509720-3c9d-47d3-9154-1687afb4d238">
                     <input type="hidden" name="_subject" value="New Contact Form Submission - Inverraholding">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button class="btn btn-primary" data-sitekey="6Le8PdQrAAAAAODO3EEjZ9JU2nMOAg0iW4OEUidU" data-callback='onSubmit' data-action='submit'>Submit</button>
                 </form>
             </div>
         </div>

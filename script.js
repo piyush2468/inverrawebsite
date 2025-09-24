@@ -16,6 +16,8 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // Dynamic Typing Animation
+
+// Typing Animation (No width change, no layout shift)
 const typingText = document.getElementById('typing-text');
 const words = ['Data', 'Ideas', 'Websites', 'Solutions', 'Innovation'];
 let wordIndex = 0;
@@ -24,30 +26,26 @@ let isDeleting = false;
 
 function typeText() {
     const currentWord = words[wordIndex];
-    
     if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
         charIndex--;
+        typingText.textContent = currentWord.substring(0, charIndex);
     } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
         charIndex++;
+        typingText.textContent = currentWord.substring(0, charIndex);
     }
-    
     if (!isDeleting && charIndex === currentWord.length) {
         isDeleting = true;
-        setTimeout(typeText, 2000); // Pause before deleting
+        setTimeout(typeText, 1200);
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeText, 500); // Pause before typing next word
+        setTimeout(typeText, 400);
     } else {
-        setTimeout(typeText, isDeleting ? 100 : 150);
+        setTimeout(typeText, isDeleting ? 60 : 120);
     }
 }
-
-// Start typing animation after page load
 window.addEventListener('load', () => {
-    setTimeout(typeText, 1000);
+    setTimeout(typeText, 800);
 });
 
 // Enhanced Tilt Effect for Service Cards
@@ -324,16 +322,8 @@ window.addEventListener('load', () => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-content');
-    
-    parallaxElements.forEach(element => {
-        const speed = 0.5;
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
+
+// Parallax effect removed to prevent layout fluctuation
 
 // Tech stack hover animation
 document.querySelectorAll('.tech-item').forEach(item => {
