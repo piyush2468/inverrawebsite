@@ -131,49 +131,33 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form handling with reCAPTCHA
+// Contact form handling without reCAPTCHA
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
     // Get form data
     const formData = new FormData(contactForm);
     const data = {};
     for (let [key, value] of formData.entries()) {
         data[key] = value;
     }
-    
     // Simple form validation
     if (!data.name || !data.email || !data.message || !data.service) {
         showNotification('Please fill in all required fields.', 'error');
         return;
     }
-    
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
         showNotification('Please enter a valid email address.', 'error');
         return;
     }
-    
-    // reCAPTCHA validation
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-        showNotification('Please complete the reCAPTCHA verification.', 'error');
-        return;
-    }
-    
-    // Add reCAPTCHA response to form data
-    formData.append('g-recaptcha-response', recaptchaResponse);
-    
     // Get the submit button
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
-    
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
-    
-    // Submit form to Formspree
+    // Submit form
     fetch(contactForm.action, {
         method: 'POST',
         body: formData,
@@ -193,7 +177,6 @@ contactForm.addEventListener('submit', function(e) {
             submittedMsg.innerHTML = '<i class="fas fa-check-circle" style="font-size:2rem;color:#27ae60;"></i><br>Thank you for your message! We will get back to you soon.';
             formContainer.appendChild(submittedMsg);
             contactForm.reset();
-            grecaptcha.reset(); // Reset reCAPTCHA
         } else {
             throw new Error('Form submission failed');
         }
